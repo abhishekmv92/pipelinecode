@@ -4,21 +4,40 @@ pipeline
   
   stages{
     
+     stage('Checkout from git'){
+      steps{
+        echo "compilation completed"
+        git 'https://github.com/abhishekmv92/pipelinecode.git'
+        
+      }
+    }
+    
+    stage('Build from git'){
+      steps{
+        echo "compilation completed"
+        bat label: '', script: 'Build.bat'
+        
+      }
+    }
+    
     stage('compile stage'){
       steps{
         echo "compilation completed"
+        bat label: '', script: 'compiled.bat'
       }
     }
     
     stage('Testing'){
       steps{
         echo "Testing is successful"
+        bat label: '', script: 'test.bat'
       }
     }
     
     stage('Deploy'){
       steps{
         echo "Deployment is successful"
+        bat label: '', script: 'deploy.bat'
       }
     }
     

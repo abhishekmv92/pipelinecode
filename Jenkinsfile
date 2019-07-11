@@ -23,7 +23,7 @@ pipeline
     stage('compile stage'){
       steps{
         echo "compilation completed"
-        bat label: '', script: 'compiled.bat'
+        bat label: '', script: 'compile.bat'
       }
     }
     

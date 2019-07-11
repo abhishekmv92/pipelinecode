@@ -1,0 +1,1 @@
+echo "Code checked out from git at %date%: %time%"

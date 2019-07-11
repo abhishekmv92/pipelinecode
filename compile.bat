@@ -1,0 +1,1 @@
+echo "Code compiled at %date%: %time%"
